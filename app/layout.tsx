@@ -39,7 +39,7 @@ export default async function RootLayout({ children }) {
         <RecoilProvider>
           <ReactQueryClientProvider>
             <ThemeProvider>
-              <AuthProvider accessToken={session.access_token}>
+              <AuthProvider accessToken={session?.access_token}>
                 {session?.user ? <MainLayout>{children}</MainLayout> : <Auth />}
               </AuthProvider>
             </ThemeProvider>
